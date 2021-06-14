@@ -1,13 +1,30 @@
-#include "Test.h"
-
 #include <iostream>
 
-int main()
+
+#include "PineApi.h"
+
+class ClientApp : public Pine::Application
 {
-	TestClass t;
+public:
+	~ClientApp()
+	{
 
-	t.TestClassCall();
+	}
+
+	ClientApp()
+	{
+
+	}
 
 
-	return 0;
+private:
+
+
+};
+
+
+// Global Symbol
+Pine::Application* CreateApplication() 
+{
+	return new ClientApp();
 }
